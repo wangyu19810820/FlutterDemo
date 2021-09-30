@@ -15,7 +15,7 @@ class _DataTypeState extends State<DataType> {
     // _boolType();
     // _listType();
     // _mapType();
-    _tips();
+    // _tips();
     return Container(child: Text('常用数据类型，请查看控制台输出'),);
   }
 

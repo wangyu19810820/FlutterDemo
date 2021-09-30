@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'data_type.dart';
+import 'oop_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    _oopLearn();
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -87,5 +90,22 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  void _oopLearn() {
+    Logger log1 = Logger();
+    Logger log2 = Logger();
+    log1.log("hello world");
+    print(log1 == log2);
+
+    Student student = new Student("aa", "wangyu", 40, city: "suzhou", country: "china");
+    student.school = "bb";
+    print(student.school);
+    print(student);
+
+    Student stu2 = Student('北大', 'tom', 20, city: '上海');
+    print(stu2);
+
+    Student.doPrint("_oopLearn");
   }
 }
