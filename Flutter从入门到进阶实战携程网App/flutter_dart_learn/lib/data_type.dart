@@ -14,7 +14,8 @@ class _DataTypeState extends State<DataType> {
     // _stringType();
     // _boolType();
     // _listType();
-    _mapType();
+    // _mapType();
+    _tips();
     return Container(child: Text('常用数据类型，请查看控制台输出'),);
   }
 
@@ -79,6 +80,41 @@ class _DataTypeState extends State<DataType> {
   }
 
   _mapType() {
+    Map names = {"xiaoming":"小明", "xiaohong":"小红"};
+    print(names);
+    Map ages = {};
+    ages["xiaoming"] = 16;
+    ages["xiaohong"] = 18;
+    print(ages);
 
+    ages.forEach((key, value) {
+      print('$key: $value');
+    });
+    Map ages2 = ages.map((key, value) {
+      return MapEntry(value, key);
+    });
+    print(ages2);
+
+    for(var key in ages.keys) {
+      print('$key: ${ages[key]}');
+    }
+  }
+
+  _tips() {
+    dynamic x = 'hal';
+    print(x.runtimeType);
+    print(x);
+
+    x = 123;
+    print(x.runtimeType);
+    print(x);
+
+    var a = 'var';
+    print(a.runtimeType);
+    print(a);
+
+    Object o1 = 'obj';
+    print(o1.runtimeType);
+    print(o1);
   }
 }
